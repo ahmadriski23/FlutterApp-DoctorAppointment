@@ -25,7 +25,7 @@ class _DoctorCardState extends State<DoctorCard> {
               SizedBox(
                 width: Config.widthSize * 0.33,
                 child: Image.network(
-                  Config.imageDoctor,
+                  Config.imageDoctor1,
                   fit: BoxFit.fill,
                 ),
               ),

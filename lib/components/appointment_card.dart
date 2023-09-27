@@ -112,9 +112,7 @@ class ScheduleCard extends StatelessWidget {
             'Monday, 11/28/2023',
             style: TextStyle(color: Colors.black),
           ),
-          SizedBox(
-            width: 20,
-          ),
+          Spacer(),
           Icon(
             Icons.access_alarm,
             color: Colors.black,
