@@ -123,107 +123,106 @@ class _AppointmentPageState extends State<AppointmentPage> {
             ),
             Config.spaceSmall,
             Expanded(
-                child: ListView.builder(
-                    itemCount: filteredSchedules.length,
-                    itemBuilder: ((context, index) {
-                      var _schedule = filteredSchedules[index];
-                      bool isLastElement =
-                          filteredSchedules.length + 1 == index;
+              child: ListView.builder(
+                itemCount: filteredSchedules.length,
+                itemBuilder: ((context, index) {
+                  var _schedule = filteredSchedules[index];
+                  bool isLastElement = filteredSchedules.length + 1 == index;
 
-                      return Card(
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Colors.grey,
-                          ),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        margin: !isLastElement
-                            ? EdgeInsets.only(bottom: 20)
-                            : EdgeInsets.zero,
-                        child: Padding(
-                          padding: EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                  return Card(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Colors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    margin: !isLastElement
+                        ? EdgeInsets.only(bottom: 20)
+                        : EdgeInsets.zero,
+                    child: Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Row(
                             children: [
-                              Row(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        _schedule['doctor_profile']),
-                                  ),
-                                  Config.spaceSmall,
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          _schedule['doctor_name'],
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          _schedule['category'],
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                              CircleAvatar(
+                                backgroundImage:
+                                    NetworkImage(_schedule['doctor_profile']),
                               ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              ScheduleCard(),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: OutlinedButton(
-                                      onPressed: () {},
-                                      child: Text(
-                                        'Cancel',
-                                        style: TextStyle(
-                                          color: Config.primaryColor,
-                                        ),
+                              Config.spaceSmall,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      _schedule['doctor_name'],
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Expanded(
-                                      child: OutlinedButton(
-                                          style: OutlinedButton.styleFrom(
-                                            backgroundColor:
-                                                Config.primaryColor,
-                                          ),
-                                          onPressed: () {},
-                                          child: Text(
-                                            'Reschedule',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            ),
-                                          )))
-                                ],
-                              )
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      _schedule['category'],
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
-                        ),
-                      );
-                    })))
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ScheduleCard(),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Cancel',
+                                    style: TextStyle(
+                                      color: Config.primaryColor,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                  child: OutlinedButton(
+                                      style: OutlinedButton.styleFrom(
+                                        backgroundColor: Config.primaryColor,
+                                      ),
+                                      onPressed: () {},
+                                      child: Text(
+                                        'Reschedule',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      )))
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+              ),
+            ),
           ],
         ),
       ),
