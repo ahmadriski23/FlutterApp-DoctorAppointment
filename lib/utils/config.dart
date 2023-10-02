@@ -13,7 +13,7 @@ class Config {
   static const imageDoctor4 =
       "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60";
   // * color
-  static const primaryColor = Color.fromARGB(255, 10, 172, 161);
+  static const primaryColor = Color.fromARGB(255, 59, 220, 105);
 
   static MediaQueryData? mediaQueryData;
   static double? screenWidth;

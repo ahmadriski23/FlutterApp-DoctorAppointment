@@ -16,7 +16,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
     return Scaffold(
       appBar: CustomAppBar(
         appTitle: 'Doctor Details',
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back_ios,
           color: Colors.black,
         ),
@@ -33,7 +33,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
               ))
         ],
       ),
-      body: SafeArea(
+      body: const SafeArea(
           child: Column(
         children: [
           AboutDoctor(),
@@ -53,13 +53,13 @@ class AboutDoctor extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 65,
             backgroundColor: Colors.white,
             backgroundImage: NetworkImage(Config.imageDoctor1),
           ),
           Config.spaceMedium,
-          Text(
+          const Text(
             'Dr Richard Tan',
             style: TextStyle(
               color: Colors.black,
@@ -70,7 +70,7 @@ class AboutDoctor extends StatelessWidget {
           Config.spaceSmall,
           SizedBox(
             width: Config.widthSize * 0.75,
-            child: Text(
+            child: const Text(
               'MBBS (International Medical University, Malaysia), MRCP(International Singapore)',
               style: TextStyle(
                 color: Colors.grey,
@@ -83,7 +83,7 @@ class AboutDoctor extends StatelessWidget {
           Config.spaceSmall,
           SizedBox(
             width: Config.widthSize * 0.75,
-            child: Text(
+            child: const Text(
               'RS Fatmawati',
               style: TextStyle(
                   color: Colors.black,
